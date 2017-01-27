@@ -21,6 +21,7 @@ Pictures/Photo Booth Library/Contents/PkgInfo
 .vim
 .viminfo
 .zshrc.d
+.zcompdump-*
 
 # code checkout
 code
