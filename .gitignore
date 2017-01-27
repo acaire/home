@@ -1,0 +1,26 @@
+# bare repository - https://news.ycombinator.com/item?id=11071754
+.home
+
+# osx system
+**/.com.apple.timemachine.supported
+**/.localized
+.CFUserTextEncoding
+.DS_Store
+.Trash
+.ssh
+
+# osx apps
+Applications/Chrome Apps.localized/
+Library
+Music
+Pictures/Photo Booth Library/Contents/PkgInfo
+
+# brew apps
+.kube
+.vault-token
+.vim
+.viminfo
+.zshrc.d
+
+# code checkout
+code
