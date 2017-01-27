@@ -1,3 +1,64 @@
 [user]
-	email = ash.caire@gmail.com
-	name = Ash Caire
+  name = Ash Caire
+  email = ash.caire@gmail.com
+
+[alias]
+  co = checkout
+  d = !git --no-pager diff
+  dc = !git --no-pager diff --cached
+  dcd = !git --no-pager diff --cached --diff-filter=ACMRTUXB
+  dcw = !git --no-pager diff --cached --color-words
+  dd = !git --no-pager diff --diff-filter=ACMRTUXB
+  df = !git --no-pager diff --name-only
+  dh = diff origin/master..HEAD
+  do = diff '--color-words=[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+  ds = diff --staged
+  dsp = diff --ignore-space-at-eol
+  dw  = diff --color-words
+  g = grep $(git rev-list --all)
+  h = !goto=$(git rev-parse --show-prefix) git --no-pager diff -- services.cfg
+  hard = reset --hard HEAD
+  lf = log --follow
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  p = push
+  pl = pull --ff-only --rebase
+  pull = pull --ff-only
+  rh = reset HEAD
+  s = status
+  undo = reset --soft HEAD^
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = 1
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = white red
+  new = green
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[core]
+  editor = /usr/local/bin/vim
+
+[diff]
+  compactionHeuristic = true
+
+[filter "media"]
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+
+[pager]
+  log = false
+
+[push]
+  default = simple
