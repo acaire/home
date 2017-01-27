@@ -20,8 +20,9 @@ Pictures/Photo Booth Library/Contents/PkgInfo
 .vault-token
 .vim
 .viminfo
-.zshrc.d
 .zcompdump-*
+.zsh_history
+.zshrc.d
 
 # code checkout
 code
