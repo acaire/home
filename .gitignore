@@ -26,3 +26,7 @@ Pictures/Photo Booth Library/Contents/PkgInfo
 
 # code checkout
 code
+
+# custom binaries
+bin/*
+!bin/Makefile

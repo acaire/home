@@ -48,3 +48,7 @@ alias kslog='kubectl logs -f --namespace=kube-system'
 alias ksrc='kubectl get rc --namespace=kube-system'
 alias kssvc='kubectl get svc --namespace=kube-system'
 alias ksvc='kubectl get svc'
+
+# Include some custom binaries
+# downloaded with bin/Makefile
+export PATH=$PATH:$HOME/bin
