@@ -16,7 +16,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 HIST_STAMPS="yyyy-mm-dd"
-plugins=(git)
+plugins=(git aws)
 source $ZSH/oh-my-zsh.sh
 
 function sshr {
