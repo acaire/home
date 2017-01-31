@@ -14,7 +14,7 @@ BREW =	ag \
 	vim \
 	zsh \
 
-all:	ec2host iamy $(addprefix $(BREW_BIN),$(BREW))
+all:	iamy $(addprefix $(BREW_BIN),$(BREW))
 
 #$(addprefix $(BREW_BIN),$(BREW)):
 #	@echo $?
@@ -27,10 +27,6 @@ all:	ec2host iamy $(addprefix $(BREW_BIN),$(BREW))
 
 /usr/local/bin/aws:
 	brew install awscli
-
-ec2host:
-	curl -L -o ec2host https://raw.githubusercontent.com/acaire/aws-tools/master/ec2host
-	echo "9070bbff8aae2e5aa569fbdf589b48f95267df19  ec2host" | shasum -c - && chmod +x ec2host || rm -i ec2host
 
 /usr/local/bin/git:
 	brew install git
