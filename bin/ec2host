@@ -172,6 +172,7 @@ for instance in sorted(all_instances,
                       if 'Name' in instance.tags
                       else '<NONAME>'),
               instance.id,
+              instance.image_id,
               " %s" % ips if len(ips) == 12 else "%s" % ips,
               instance.instance_type,
               state,
