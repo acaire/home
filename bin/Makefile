@@ -5,6 +5,7 @@ BREW_BIN := /usr/local/bin/
 BREW =	ag \
 	ansible \
 	aws \
+	ctags \
 	git \
 	jq \
 	kubectl \
@@ -27,6 +28,9 @@ all:	iamy $(addprefix $(BREW_BIN),$(BREW))
 
 /usr/local/bin/aws:
 	brew install awscli
+
+/usr/local/bin/ctags:
+	brew install ctags
 
 /usr/local/bin/git:
 	brew install git

@@ -10,6 +10,7 @@ call vundle#begin()
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'vim-airline/vim-airline'
+Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 
 syntax on
