@@ -6,6 +6,7 @@ BREW =	ag \
 	ansible \
 	aws \
 	ctags \
+	docker-compose \
 	git \
 	jq \
 	kubectl \
