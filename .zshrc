@@ -52,3 +52,5 @@ alias ksvc='kubectl get svc'
 # Include some custom binaries
 # downloaded with bin/Makefile
 export PATH=$PATH:$HOME/bin
+
+export PYTHONDONTWRITEBYTECODE=1
