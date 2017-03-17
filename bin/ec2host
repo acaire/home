@@ -149,7 +149,7 @@ for instance in sorted(all_instances,
         else:
             status = arrow.get(instance.launch_time).humanize()
 
-        if 'aws:autoscaling:groupName' in instance.tags:
+        if 'aws:autoscaling:groupName' in instance.tags and instance.state != 'terminated':
             if not instance.tags['aws:autoscaling:groupName'] in asgs:
                 elbs = as_conn.get_all_groups(names=[instance.tags['aws:autoscaling:groupName']])[0].load_balancers
                 for i in elbs:
