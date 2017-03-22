@@ -16,7 +16,7 @@ BREW =	ag \
 	vim \
 	zsh \
 
-all:	iamy $(addprefix $(BREW_BIN),$(BREW))
+all:	iamy ngrok $(addprefix $(BREW_BIN),$(BREW))
 
 #$(addprefix $(BREW_BIN),$(BREW)):
 #	@echo $?
@@ -33,6 +33,9 @@ all:	iamy $(addprefix $(BREW_BIN),$(BREW))
 /usr/local/bin/ctags:
 	brew install ctags
 
+/usr/local/bin/docker-compose:
+	brew install docker-compose
+
 /usr/local/bin/git:
 	brew install git
 
@@ -48,6 +51,12 @@ iamy:
 
 /usr/local/bin/kubectl:
 	brew install kubernetes-cli
+
+ngrok:
+	curl -L -o /tmp/ngrok.gzip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip
+	unzip /tmp/ngrok.gzip
+	rm /tmp/ngrok.gzip
+	echo "8749d99c0837c63f1c934e0c1eb6302194283452  ngrok" | shasum -c - && chmod +x ngrok || rm -i ngrok
 
 /usr/local/bin/python:
 	brew install python
