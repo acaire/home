@@ -10,6 +10,7 @@ BREW =	ag \
 	git \
 	jq \
 	kubectl \
+	packer \
 	python \
 	tig \
 	vault \
@@ -57,6 +58,9 @@ ngrok:
 	unzip /tmp/ngrok.gzip
 	rm /tmp/ngrok.gzip
 	echo "8749d99c0837c63f1c934e0c1eb6302194283452  ngrok" | shasum -c - && chmod +x ngrok || rm -i ngrok
+
+/usr/local/bin/packer:
+	brew install packer
 
 /usr/local/bin/python:
 	brew install python
